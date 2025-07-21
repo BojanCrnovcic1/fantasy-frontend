@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Table.scss";
+import "./table.scss";
 import { useAuth } from "../../../context/AuthContext";
 import { ApiConfig } from "../../../config/ApiConfig";
 import type { Scores } from "../../../types/Scores";
