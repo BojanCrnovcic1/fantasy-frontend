@@ -1,0 +1,66 @@
+.worst-table {
+    background: #0a1c2b;
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'Premier League', sans-serif;
+  
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #e0caff;
+      text-shadow: 1px 1px 2px #000;
+    }
+  
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+  
+      th, td {
+        padding: 0.8rem 1rem;
+        text-align: left;
+      }
+  
+      thead {
+        background-color: rgba(255, 255, 255, 0.1);
+        
+        th {
+          color: #e0caff;
+          font-weight: 600;
+          font-size: 1rem;
+          border-bottom: 2px solid #fff;
+        }
+      }
+  
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+  
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+  
+          td {
+            color: #f3f3f3;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  

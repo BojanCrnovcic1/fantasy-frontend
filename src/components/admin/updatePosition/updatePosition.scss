@@ -1,0 +1,191 @@
+.update-position {
+  touch-action: none;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1b1f54, #3b0764);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease-in-out;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #e6e6e6;
+    margin-bottom: 1.5rem;
+  }
+
+  .season-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    label {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    input {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      background: #f0f0f0;
+      color: #333;
+      width: 120px;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: 2px solid #7c3aed;
+      }
+    }
+  }
+
+  .error {
+    color: #ff4c4c;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: slideUp 0.6s ease;
+
+    thead {
+      background: #7c3aed;
+
+      tr {
+        th {
+          padding: 1rem;
+          font-size: 1rem;
+          color: #fff;
+          text-align: left;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background: #fdfdfd;
+        color: #333;
+        transition: background 0.3s ease;
+        min-height: 50px;
+        touch-action: none; 
+        cursor: grab;
+
+        &:hover {
+          background: #e0e7ff;
+        }
+
+        td {
+          padding: 1rem;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    table {
+      font-size: 0.9rem;
+
+      thead {
+        tr {
+          th {
+            padding: 0.75rem;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 0.75rem;
+          }
+        }
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .season-input {
+      flex-direction: column;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tbody {
+      tr {
+        margin-bottom: 1rem;
+        background: #f0f0f0;
+        border-radius: 12px;
+        padding: 1rem;
+
+        td {
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem 0;
+          font-size: 0.95rem;
+
+          &::before {
+            content: attr(data-label);
+            font-weight: bold;
+            margin-right: 1rem;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
