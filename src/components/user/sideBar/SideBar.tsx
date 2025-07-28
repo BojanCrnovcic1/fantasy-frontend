@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Text, Menu, Banana, Table2Icon, DeleteIcon } from 'lucide-react';
+import { ChevronDown, ChevronUp, Text, Menu, Banana, Table2Icon, TableOfContents, DeleteIcon } from 'lucide-react';
 import React, { useState } from 'react';
 import './sideBar.scss';
 import { Link } from 'react-router-dom';
@@ -42,6 +42,9 @@ const SideBar: React.FC<AdminSideBarProps> = ({ collapsed, setCollapsed}) => {
             <div className="submenu">
               <Link to="newPrediction">
                 <Table2Icon size={18} /> Predvidi tabelu
+              </Link>
+              <Link to="myPrediction">
+                <TableOfContents size={18} /> Moja predikcija
               </Link>
             </div>
           )}

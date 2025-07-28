@@ -1,0 +1,126 @@
+.my-predictions {
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #240046, #5a189a); 
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 0 auto;
+  
+    h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: #ffd700; 
+      animation: fadeInDown 1s ease-in-out;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease both;
+      position: relative;
+  
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+  
+      strong {
+        width: 40px;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+  
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        margin-left: 10px;
+      }
+  
+      &.champion {
+        background-color: #ffd70022;
+        border-left: 6px solid #ffd700;
+      }
+  
+      &.ucl {
+        background-color: #1e90ff22;
+        border-left: 6px solid #1e90ff;
+      }
+  
+      &.europe {
+        background-color: #32cd3222;
+        border-left: 6px solid #32cd32;
+      }
+  
+      &.relegation {
+        background-color: #ff000022;
+        border-left: 6px solid #ff0000;
+      }
+    }
+  
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    @media (max-width: 600px) {
+      padding: 1rem;
+  
+      li {
+        flex-direction: row;
+        align-items: flex-start;
+  
+        img {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  

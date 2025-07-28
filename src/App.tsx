@@ -16,6 +16,7 @@ import Table from './components/user/table/Table'
 import WorstTable from './components/user/table/WorstTable'
 import ScoringRules from './components/user/scoringRules/ScoringRules'
 import LandingPage from './pages/landing/LandingPage'
+import MyPredicition from './components/user/myPredicition/MyPredicition'
 
 const App = () => {
   const {accessToken, user} = useAuth();
@@ -47,6 +48,7 @@ const App = () => {
       <Route path='/dashbourd' element={<ProtectedRoute allowedRoles={['USER']}><Profile /></ProtectedRoute>
       }>
         <Route path='newPrediction' element={<CreatePrediction />} />
+        <Route path='myPrediction' element={<MyPredicition />} />
         <Route path='table' element={<Table />} />
         <Route path='worstTable' element={<WorstTable />} />
         <Route path='delete-acc' element={<DeleteUser />} />
